@@ -1,0 +1,14 @@
+@charset "UTF-8";
+p{
+	color:red;
+	font-size:400px;
+}
+#main_top{
+	background:red;
+}
+#main_left{
+	background:green;
+}
+#main_right{
+	background:blue;
+}

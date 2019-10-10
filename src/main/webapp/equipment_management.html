@@ -1,0 +1,443 @@
+<!--id没加完，到时候用c：foreach取出每一个，自己添加-->
+<!--直接用这个ajax，清楚所有内容再画每一个-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>所有厂区</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script src="jquery/jquery.min.js"></script>
+<!--    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>-->
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!--    <h2>标题、文本和链接</h2>-->
+<!--    <div class="card">-->
+<!--        <div class="card-body col-sm-3">-->
+<!--            <h4 class="card-title">Card title</h4>-->
+<!--            <p class="card-text">Some example text. Some example text.</p>-->
+<!--            <a href="#" class="card-link">Card link</a>-->
+<!--            <a href="#" class="card-link">Another link</a>-->
+<!--        </div>-->
+<!--        <div class="card-body col-sm-3">-->
+<!--            <h4 class="card-title">Card title</h4>-->
+<!--            <p class="card-text">Some example text. Some example text.</p>-->
+<!--            <a href="#" class="card-link">Card link</a>-->
+<!--            <a href="#" class="card-link">Another link</a>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="card-deck mb-2 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">1区</h4>
+            </div>
+            <div class="card-body">
+
+<!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">1区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+<!--                    <li>Email support</li>-->
+<!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary " id="button1">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">2号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">2区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">3号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">3区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">4号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">4区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">1区</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">1区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">2号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">2区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">3号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">3区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">4号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">4区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">1区</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">1区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">2号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">2区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">3号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">3区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">4号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">4区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">1区</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">1区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">2号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">2区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">3号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">3区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">4号</h4>
+            </div>
+            <div class="card-body">
+
+                <!--                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>-->
+
+
+                <h1 class="card-title pricing-card-title"><small class="text-muted">4区锅炉</small></h1>
+
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>总用水量</li>
+                    <li>总锅炉</li>
+                    <li></li>
+                    <li></li>
+                    <!--                    <li>Email support</li>-->
+                    <!--                    <li>Help center access</li>-->
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">详情</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Free</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>10 users included</li>
+                    <li>2 GB of storage</li>
+                    <li>Email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Free</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>10 users included</li>
+                    <li>2 GB of storage</li>
+                    <li>Email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Pro</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>20 users included</li>
+                    <li>10 GB of storage</li>
+                    <li>Priority email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Enterprise</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+<script type="text/javascript">
+
+    $(".btn").click(
+        function () {
+            var id=this.id;
+             // alert("nmsl");
+            // alert(id);
+            window.location.href ="equ_det.jsp"
+            // alert(id);
+        }
+    );
+</script>
+</html>

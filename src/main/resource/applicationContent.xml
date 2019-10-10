@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<!--引入外部数据库连接的信息-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+
+
+<!--    数据池连接数据库-->
+    <bean  id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driverClass}"/>
+        <property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
+        <property name="user" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+<!--    没有数据库所以还没配-->
+
+<!--    mybatis接管数据池来进行数据库的交互-->
+<!--    <bean id="sessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource"></property>-->
+<!--        &lt;!&ndash;        全局配置的mybatis设置&ndash;&gt;-->
+<!--        <property name="configLocation" value="classpath:mybatis-config.xml"></property>-->
+
+<!--        &lt;!&ndash;        映射的mybatis的，处理语句的&ndash;&gt;-->
+<!--        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>-->
+<!--    </bean>-->
+
+
+<!--    自动扫描除controller的类-->
+    <context:component-scan base-package="com.huadian">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+<!--    配置事务，出现意外可以回滚-->
+
+    <!--    事务通关控制数据池来进行回滚，配置事务控制器控制事务-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <!--    通过切面找到那些方法需要事务来混滚，配置aop事务切面-->
+    <aop:config>
+        <aop:pointcut id="txPoint" expression="execution(* com.huadian.service..*(..))"/>
+        <!--        需要控制的事务，service包下的所有-->
+        <!--    通过advice来对pointcut来进行事务处理    切入的方法-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"></aop:advisor>
+    </aop:config>
+    <!--    配置事务增强-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*"/>
+            <tx:method name="get*" read-only="true"></tx:method>
+            <!--            所有的查询只能读取-->
+        </tx:attributes>
+
+    </tx:advice>
+</beans>
+
